@@ -168,13 +168,13 @@ double***MASTER::run(size_t repetitions)
             //std::cout << "itcount " << itcount << " iterations " << iterations << " converged " << converged << "\n";
         }
         while (!converged && (itcount < iterations || iterations <= 0));
-        std::cout << "Run " << j << " out of " << repetitions << " finished" << std::endl;
+        std::cout << "Round " << (j+1) << " out of " << repetitions << " finished" << std::endl;
 
         temp = calccosts();
         //std::cout << temp<<std::endl;
         if (temp < costs)
         {
-            std::cout << "Better solution found, updating centers" << std::endl;
+            std::cout << " - Better solution found, updating centers" << std::endl;
             costs = temp;
             for (int m = 0; m < k; m++)
             {
