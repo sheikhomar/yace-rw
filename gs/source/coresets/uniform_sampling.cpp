@@ -13,7 +13,7 @@ UniformSampling::run(const blaze::DynamicMatrix<double> &data)
 
     size_t nPoints = data.rows();
 
-    auto sampledIndices = random.choice(TargetSamplesInCoreset);
+    auto sampledIndices = random.choice(TargetSamplesInCoreset, nPoints);
 
     double weight = static_cast<double>(nPoints) / static_cast<double>(TargetSamplesInCoreset);
 

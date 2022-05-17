@@ -115,12 +115,12 @@ Random::choice(blaze::DynamicVector<double> &weights)
 }
 
 std::shared_ptr<blaze::DynamicVector<size_t>>
-Random::choice(const size_t k)
+Random::choice(const size_t k, const size_t n)
 {
     auto result = std::make_shared<blaze::DynamicVector<size_t>>(k);
     result->reset();
 
-    std::uniform_int_distribution<int> intDist(0, k - 1);
+    std::uniform_int_distribution<int> intDist(0, n - 1);
 
     for (size_t i = 0; i < k; i++)
     {

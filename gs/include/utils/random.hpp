@@ -58,7 +58,7 @@ namespace utils
         choice(blaze::DynamicVector<double> &weights);
 
         std::shared_ptr<blaze::DynamicVector<size_t>>
-        choice(const size_t k);
+        choice(const size_t k, const size_t n);
 
         /**
          * @brief Select a number of elements from vector uniformly at random.
