@@ -34,5 +34,7 @@ cmake --build gs/build
 ```bash
 pyenv install
 poetry install
-poetry run python -m xrun.go
+poetry run python -m xrun.gen -s 0 -e 9 -a ss,gs,us -d tower,census,covertype -c 200
+poetry run python -m xrun.go -o data/experiments -m 1
+poetry run python -m xrun.calc_costs -r data/experiments
 ```
