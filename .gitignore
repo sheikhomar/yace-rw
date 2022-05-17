@@ -40,3 +40,4 @@ __pycache__
 
 /data/
 build/
+notebooks/figures
